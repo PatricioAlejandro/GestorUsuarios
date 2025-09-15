@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct GestorUsuariosApp: App {
+    @StateObject private var appCoordinator = AppCoordinator()
+
     var body: some Scene {
         WindowGroup {
-            AppCoordinator().rootView
+            appCoordinator.rootView
         }
     }
 }

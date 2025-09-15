@@ -1,5 +1,9 @@
+//
 //  Models.swift
-//  UsersApp
+//  GestorUsuarios
+//
+//  Created by Patricio Chavez on 15/9/25.
+//
 
 import Foundation
 import RealmSwift
@@ -37,7 +41,7 @@ struct APIUser: Decodable {
     struct Company: Decodable {
         let name: String
         let catchPhrase: String
-        let bs: String
+        let bs: String?
     }
     
     let id: Int
@@ -67,7 +71,9 @@ extension User {
         }
         user.companyName = api.company.name
         user.companyCatchPhrase = api.company.catchPhrase
-        user.companyBs = api.company.bs
+        if let companyBs = api.company.bs {
+            user.companyBs = companyBs
+        }
         return user
     }
 }
