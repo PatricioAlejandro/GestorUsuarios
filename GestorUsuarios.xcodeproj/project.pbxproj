@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		27B6A90C2E7885CE00D8EF59 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 27B6A90B2E7885CE00D8EF59 /* Alamofire */; };
+		27B6A91C2E78870100D8EF59 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 27B6A91B2E78870100D8EF59 /* RealmSwift */; };
+		27B6A91D2E78870100D8EF59 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 27B6A91B2E78870100D8EF59 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		27B6A8A92E7876D600D8EF59 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -23,15 +29,42 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		27B6A9102E7885D100D8EF59 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				27B6A91D2E78870100D8EF59 /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		27B6A89B2E7876D500D8EF59 /* GestorUsuarios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestorUsuarios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B6A8A82E7876D600D8EF59 /* GestorUsuariosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestorUsuariosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B6A8B22E7876D600D8EF59 /* GestorUsuariosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestorUsuariosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		27B6A9252E788F1400D8EF59 /* Exceptions for "GestorUsuarios" folder in "GestorUsuarios" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 27B6A89A2E7876D500D8EF59 /* GestorUsuarios */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		27B6A89D2E7876D500D8EF59 /* GestorUsuarios */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				27B6A9252E788F1400D8EF59 /* Exceptions for "GestorUsuarios" folder in "GestorUsuarios" target */,
+			);
 			path = GestorUsuarios;
 			sourceTree = "<group>";
 		};
@@ -52,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B6A91C2E78870100D8EF59 /* RealmSwift in Frameworks */,
+				27B6A90C2E7885CE00D8EF59 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +113,7 @@
 				27B6A89D2E7876D500D8EF59 /* GestorUsuarios */,
 				27B6A8AB2E7876D600D8EF59 /* GestorUsuariosTests */,
 				27B6A8B52E7876D600D8EF59 /* GestorUsuariosUITests */,
+				27B6A90A2E7885CE00D8EF59 /* Frameworks */,
 				27B6A89C2E7876D500D8EF59 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +128,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		27B6A90A2E7885CE00D8EF59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,6 +145,7 @@
 				27B6A8972E7876D500D8EF59 /* Sources */,
 				27B6A8982E7876D500D8EF59 /* Frameworks */,
 				27B6A8992E7876D500D8EF59 /* Resources */,
+				27B6A9102E7885D100D8EF59 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -112,6 +156,8 @@
 			);
 			name = GestorUsuarios;
 			packageProductDependencies = (
+				27B6A90B2E7885CE00D8EF59 /* Alamofire */,
+				27B6A91B2E78870100D8EF59 /* RealmSwift */,
 			);
 			productName = GestorUsuarios;
 			productReference = 27B6A89B2E7876D500D8EF59 /* GestorUsuarios.app */;
@@ -198,7 +244,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				27B6A9082E78828000D8EF59 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				27B6A9092E7882F100D8EF59 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				27B6A9172E7886EF00D8EF59 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 27B6A89C2E7876D500D8EF59 /* Products */;
@@ -402,11 +448,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GestorUsuarios/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Necesitamos utilizar tu ubicacion";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Necesitamos utilizar tu ubicacion";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -414,6 +463,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.patolabs.GestorUsuarios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -429,11 +482,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GestorUsuarios/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Necesitamos utilizar tu ubicacion";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Necesitamos utilizar tu ubicacion";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -441,6 +497,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.patolabs.GestorUsuarios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -565,7 +625,7 @@
 				minimumVersion = 5.10.2;
 			};
 		};
-		27B6A9092E7882F100D8EF59 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		27B6A9172E7886EF00D8EF59 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
 			requirement = {
@@ -574,6 +634,19 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		27B6A90B2E7885CE00D8EF59 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27B6A9082E78828000D8EF59 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		27B6A91B2E78870100D8EF59 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27B6A9172E7886EF00D8EF59 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 27B6A8932E7876D500D8EF59 /* Project object */;
 }

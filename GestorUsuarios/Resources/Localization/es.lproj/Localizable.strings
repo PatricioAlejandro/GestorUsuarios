@@ -1,0 +1,11 @@
+/* Localizable.strings (Spanish) */
+"Users" = "Usuarios";
+"Detail" = "Detalle";
+"New User" = "Nuevo Usuario";
+"Name" = "Nombre";
+"Email" = "Correo";
+"Phone" = "Teléfono";
+"Get location" = "Obtener ubicación";
+"Create" = "Crear";
+"Coordinates" = "Coordenadas";
+"OK" = "Aceptar";

@@ -1,0 +1,11 @@
+/* Localizable.strings (English) */
+"Users" = "Users";
+"Detail" = "Detail";
+"New User" = "New User";
+"Name" = "Name";
+"Email" = "Email";
+"Phone" = "Phone";
+"Get location" = "Get location";
+"Create" = "Create";
+"Coordinates" = "Coordinates";
+"OK" = "OK";
