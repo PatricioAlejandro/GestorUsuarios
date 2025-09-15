@@ -192,9 +192,14 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 27B6A8922E7876D500D8EF59;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				27B6A9082E78828000D8EF59 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				27B6A9092E7882F100D8EF59 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 27B6A89C2E7876D500D8EF59 /* Products */;
 			projectDirPath = "";
@@ -550,6 +555,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		27B6A9082E78828000D8EF59 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		27B6A9092E7882F100D8EF59 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 27B6A8932E7876D500D8EF59 /* Project object */;
 }
