@@ -34,7 +34,7 @@ struct APIUser: Decodable {
         let street: String
         let suite: String
         let city: String
-        let zipCode: String
+        let zipcode: String
         let geo: Geo
     }
     

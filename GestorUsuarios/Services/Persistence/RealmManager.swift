@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 import CoreLocation
 
+@MainActor
 final class RealmManager {
     static let shared = RealmManager()
     private let realm = try! Realm()

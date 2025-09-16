@@ -32,6 +32,7 @@ public struct UpdateUser {
     public var email: String
 }
 
+@MainActor
 public protocol UsersRepository {
     func refreshUsers() async throws
     func usersPublisher() -> AnyPublisher<[UserUI], Never>
