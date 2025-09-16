@@ -10,6 +10,8 @@ import Combine
 import RealmSwift
 import CoreLocation
 
+
+@MainActor
 final class DefaultUsersRepository: UsersRepository {
     private let api: UsersAPIType
     private let realm: Realm

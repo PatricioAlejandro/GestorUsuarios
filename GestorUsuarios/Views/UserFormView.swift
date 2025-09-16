@@ -10,6 +10,8 @@ import CoreLocation
 
 struct UserFormView: View {
     @StateObject var viewModel: UserFormViewModel
+    @Environment(\.dismiss) private var dismiss
+    @State private var didRequestDismiss = false
     @State private var showCoord = false
 
     var body: some View {
@@ -37,5 +39,15 @@ struct UserFormView: View {
             }
         })
         .navigationTitle("New User")
+        .onChange(of: viewModel.state) { newState in
+            if newState == .success {
+                guard !didRequestDismiss else { return }
+                didRequestDismiss = true
+                DispatchQueue.main.async { dismiss() }
+            }
+        }
+        .onDisappear {
+            if didRequestDismiss { viewModel.resetForm() }
+        }
     }
 }

@@ -1,4 +1,3 @@
-//
 //  UsersListViewModel.swift
 //  GestorUsuarios
 //
@@ -16,8 +15,9 @@ final class UsersListViewModel: ObservableObject {
     @Published private(set) var users: [UserUI] = []
     @Published var searchText: String = ""
 
-    private let repo: UsersRepository
+    let repo: UsersRepository
     private var bag = Set<AnyCancellable>()
+    private var didInitialRefresh = false
 
     init(repo: UsersRepository) {
         self.repo = repo
@@ -50,10 +50,14 @@ final class UsersListViewModel: ObservableObject {
     }
 
     func onAppear() {
+        guard !didInitialRefresh else { return }
+        didInitialRefresh = true
         Task { await refresh() }
     }
 
-    func refresh() async {
+    func manualRefresh() async { await refresh() }
+
+    private func refresh() async {
         state = .loading
         do {
             try await repo.refreshUsers()
@@ -64,12 +68,7 @@ final class UsersListViewModel: ObservableObject {
     }
 
     func delete(_ user: UserUI) {
-        do {
-            try repo.logicalDelete(id: user.id)
-        } catch {
-            state = .error(error.localizedDescription)
-        }
+        do { try repo.logicalDelete(id: user.id) }
+        catch { state = .error(error.localizedDescription) }
     }
-    
 }
-
